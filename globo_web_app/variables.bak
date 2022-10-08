@@ -1,0 +1,51 @@
+variable "aws_access_key" {
+    type = string
+    description = "AWS access key"
+    sensitive = true
+}
+
+variable "aws_secret_key" {
+    type = string
+    description = "AWS scecret key"
+    sensitive = true
+}
+
+variable "aws_region" {
+    type = string
+    description = "AWS regions"
+    default = "us-east-1"
+}
+
+variable "vpc_cidr_block" {
+    type = string
+    description = "cidr block to be used for in the VPC"
+    default = "10.0.0.0/16"
+}
+
+variable "dns_hostname_enable" {
+    type = bool
+    description = "should dns hostnames be enabled by default"
+    default = true
+}
+
+variable "aws_instance_type" {
+    type = string
+    description = "use free tier instance type"
+    default = "t2.micro"
+}
+
+variable "company" {
+    type = string
+    description = "tag"
+    default = "Globomantics"
+}
+
+variable "project" {
+    type = string
+    description = "tag"
+}
+
+variable "billing_code" {
+    type = string
+    description = "tag"
+}

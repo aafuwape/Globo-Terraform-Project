@@ -1,0 +1,3 @@
+[submodule "globo_web_app/.terraform/modules/vpc"]
+	path = globo_web_app/.terraform/modules/vpc
+	url = https://github.com/terraform-aws-modules/terraform-aws-vpc
