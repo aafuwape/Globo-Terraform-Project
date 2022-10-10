@@ -46,3 +46,12 @@ terraform apply "dev_test.tfplan"
 ```
 terraform destroy -auto-approve
 ```
+
+### Challenges
+I decided to upload the project to github directly from the command line and there was a learning curve to it.  
+**The challenges included**
+- Large files - These were files created by terraform init in my local directory for the project. adding the directory to .gitignore will have prevented this since they did not need to be uploaded to github.  
+To resolve this, I deleted the large files but was still unable to commit the files to github. Now I understand that the issue was that the files were already in the staging area and I needed to remove it. Instead, the solution that worked for me at the time was to create a new temporary branch, add my files to the new branch, delete the old branch, rename the temporary branch and make the temporary branch the main. Thereafter, I was able to commit the files.
+- Modules with .git directory - Because I used a module (vpc module) in this project, I had to upload as a submodule. This is because it was linked to the repository of origin. Git gave clue of how to resolved this which was to upload it as a submodule. 
+
+**After this, I took the _Git Tutorial for Beginners: Learn Git in 1 Hour_ by Mosh on youtube to better understand git.**
